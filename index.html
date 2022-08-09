@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Open Shogi Kifu</title>
+<meta charset="utf-8">
+<script src="https://cdn.jsdelivr.net/npm/kifu-for-js@3/bundle/kifu-for-js.min.js" charset="utf-8"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<script>var Kifu = KifuForJS;</script>
+<style>.kifuforjs-comment{display:none;}</style>
+</head>
+<body>
+<script>
+var queryString = window.location.search.substring(1);
+if (queryString.indexOf('%') !== -1) {
+  queryString = decodeURIComponent(queryString);
+}
+var kifu = Kifu.loadString(queryString);
+</script>
+</body>
+</html>
